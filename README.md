@@ -1,0 +1,3 @@
+使用kotlin进行编写，其中MySlidingTabLayout和SimpleCardFragment是从java直接转换过来的
+本demo主要是对[flycolayout](https://github.com/H07000223/FlycoTabLayout/blob/master/README_CN.md)进行改造，
+使SlidingTabLayout具有设置选中和非选中字体大小的功能
