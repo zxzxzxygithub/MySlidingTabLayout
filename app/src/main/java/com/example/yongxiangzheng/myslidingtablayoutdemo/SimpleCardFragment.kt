@@ -12,10 +12,6 @@ import android.widget.TextView
 class SimpleCardFragment : Fragment() {
     private var mTitle: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fr_simple_card, null)
         val cardTitleTv = v.findViewById<View>(R.id.card_title_tv) as TextView
