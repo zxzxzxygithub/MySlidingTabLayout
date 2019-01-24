@@ -14,8 +14,6 @@ abstract  class BaseTabViewPagerActivity : AppCompatActivity(),
 
     override fun setContentView(layoutResID: Int) {
         super.setContentView(layoutResID)
-        getFragments(getTitles())
-        setAdapter(getAdapter())
-        setViewPager()
+        TabViewPagerModel.installTabAndViewPager(this)
     }
 }
