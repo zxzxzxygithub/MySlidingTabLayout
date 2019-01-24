@@ -133,20 +133,20 @@ class MySlidingTabLayout @JvmOverloads constructor(
         for (i in 0 until tabsContainer.childCount) {
             val tabView = tabsContainer.getChildAt(i) ?: continue
             val isSelect = i == position
-            val tab_title = tabView.findViewById<TextView>(R.id.tv_tab_title)
-            val layoutParams = tab_title.layoutParams as RelativeLayout.LayoutParams
+            val tabTitle = tabView.findViewById<TextView>(R.id.tv_tab_title)
+            val layoutParams = tabTitle.layoutParams as RelativeLayout.LayoutParams
             layoutParams.height = dp2px(44f)
-            tab_title.layoutParams = layoutParams
-            tab_title.gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+            tabTitle.layoutParams = layoutParams
+            tabTitle.gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
             if (isSelect) {
                 val bottom = dp2px(6.5f)
-                tab_title.setPadding(tab_title.paddingLeft, tab_title.paddingTop, tab_title.paddingRight, bottom)
+                tabTitle.setPadding(tabTitle.paddingLeft, tabTitle.paddingTop, tabTitle.paddingRight, bottom)
             } else {
                 val bottom = dp2px(8f)
-                tab_title.setPadding(tab_title.paddingLeft, tab_title.paddingTop, tab_title.paddingRight, bottom)
+                tabTitle.setPadding(tabTitle.paddingLeft, tabTitle.paddingTop, tabTitle.paddingRight, bottom)
             }
 
-            tab_title.textSize = if (isSelect) selectTextSize else unSelectTextSize
+            tabTitle.textSize = if (isSelect) selectTextSize else unSelectTextSize
         }
     }
 
