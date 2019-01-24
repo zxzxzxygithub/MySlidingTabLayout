@@ -1,7 +1,6 @@
-package com.example.yongxiangzheng.myslidingtablayoutdemo
+package com.example.yongxiangzheng.myslidingtablayoutdemo.widget
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.os.Bundle
 import android.os.Parcelable
 import android.support.v4.app.Fragment
@@ -9,14 +8,13 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.view.ViewPager
 import android.util.AttributeSet
 import android.view.Gravity
-import android.view.View
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
+import com.example.yongxiangzheng.myslidingtablayoutdemo.R
 
 import com.flyco.tablayout.SlidingTabLayout
 
-import java.lang.reflect.Field
 import java.util.ArrayList
 
 /**
@@ -43,7 +41,9 @@ class MySlidingTabLayout @JvmOverloads constructor(
     }
 
     private fun obtainOtherAttributes(context: Context, attrs: AttributeSet) {
-        val ta = context.obtainStyledAttributes(attrs, R.styleable.MySlidingTabLayout)
+        val ta = context.obtainStyledAttributes(attrs,
+            R.styleable.MySlidingTabLayout
+        )
         mTextsize = ta.getDimension(com.flyco.tablayout.R.styleable.SlidingTabLayout_tl_textsize, sp2px(14f).toFloat())
         mSelectedTextSize = ta.getFloat(R.styleable.MySlidingTabLayout_selectedTextSize, 16f)
         mUnSelectedTextSize = ta.getFloat(R.styleable.MySlidingTabLayout_unSelectedTextSize, 14f)

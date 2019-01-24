@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <com.example.yongxiangzheng.myslidingtablayoutdemo.MySlidingTabLayout
+    <com.example.yongxiangzheng.myslidingtablayoutdemo.widget.MySlidingTabLayout
             android:id="@+id/st"
             android:layout_width="0dp"
             app:layout_constraintTop_toTopOf="parent"
